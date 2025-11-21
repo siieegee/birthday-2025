@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Love Letter</title>
-  <link rel="stylesheet" href="letter.css">
+  <title>Our Playlist</title>
+  <link rel="stylesheet" href="music.css">
 </head>
 <body>
 
@@ -27,20 +27,34 @@
   <a href="home.html" class="back-btn">← Back Home</a>
 
   <div class="container">
-    <div class="letter-wrapper">
-      <div class="letter-content">
-        <h1>My Love</h1>
-        <p>
-          From the moment our paths crossed, everything felt softer, warmer, lighter.
-          You bring color into my days in ways I never thought possible. This little
-          letter is just a piece of what my heart carries for you every single day.
-        </p>
-        <p>
-          Thank you for being you — for your kindness, your laughter, your warmth,
-          and the quiet way you make my world feel like home.
-        </p>
-        <p class="ending">Forever yours,<br>❤️</p>
-      </div>
+    <header class="hero">
+      <h1 class="main-title">Our Playlist</h1>
+      <p class="subtitle">Songs that remind me of us</p>
+    </header>
+
+    <div class="music-wrapper">
+      <section class="music-section">
+        <div class="qr-wrapper">
+          <h3>Scan to Listen</h3>
+          <img src="images/spotify-qr.png" alt="Spotify Playlist QR" class="spotify-qr">
+          <p class="qr-caption">
+            Scan with your phone or visit<br>
+            <span class="link">open.spotify.com/playlist/6erkoRvbPz6P21pIbc3DEJ</span>
+          </p>
+        </div>
+
+        <div class="embed-wrapper">
+          <iframe 
+            style="border-radius:12px"
+            src="https://open.spotify.com/embed/playlist/6erkoRvbPz6P21pIbc3DEJ?utm_source=generator"
+            width="100%" 
+            height="380" 
+            frameBorder="0"
+            allowtransparency="true" 
+            allow="encrypted-media">
+          </iframe>
+        </div>
+      </section>
     </div>
 
     <footer class="footer">

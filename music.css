@@ -77,11 +77,30 @@ body {
   z-index: 10;
 }
 
-/* Letter wrapper */
-.letter-wrapper {
+/* Hero section */
+.hero {
+  text-align: center;
+  padding: 40px 20px 30px;
+}
+
+.main-title {
+  font-family: 'Chelsea Market', cursive;
+  font-size: clamp(2.5rem, 7vw, 4rem);
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.subtitle {
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 30px;
+}
+
+/* Music section */
+.music-wrapper {
   background: rgba(255, 255, 255, 0.95);
   border-radius: 20px;
-  padding: 50px 40px;
+  padding: 40px 35px;
   border: 3px solid rgba(238, 156, 167, 0.3);
   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
   animation: fadeIn 0.6s ease;
@@ -92,28 +111,59 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
-.letter-content h1 {
-  font-family: 'Chelsea Market', cursive;
-  font-size: clamp(2.2rem, 5vw, 3.2rem);
-  color: #ee9ca7;
+.music-section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+/* QR Code section */
+.qr-wrapper {
+  width: 100%;
   text-align: center;
-  margin-bottom: 35px;
 }
 
-.letter-content p {
-  font-size: clamp(1.05rem, 2.5vw, 1.25rem);
-  line-height: 1.8;
-  color: #555;
-  margin-bottom: 20px;
-}
-
-.ending {
-  text-align: right;
-  font-size: clamp(1.15rem, 3vw, 1.4rem);
-  font-weight: 600;
-  color: #ee9ca7;
-  margin-top: 30px;
+.qr-wrapper h3 {
   font-family: 'Chelsea Market', cursive;
+  font-size: 1.5rem;
+  color: #ee9ca7;
+  margin-bottom: 15px;
+}
+
+.spotify-qr {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin: 0 auto 15px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: block;
+  padding: 10px;
+}
+
+.qr-caption {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.qr-caption .link {
+  font-size: 0.9rem;
+  color: #ee9ca7;
+  font-weight: 600;
+  word-break: break-all;
+}
+
+/* Spotify embed */
+.embed-wrapper {
+  width: 100%;
+}
+
+.embed-wrapper iframe {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 /* Footer */
@@ -124,8 +174,14 @@ body {
 }
 
 .footer p {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-style: italic;
+  margin-bottom: 8px;
+}
+
+.footer-date {
+  font-size: 0.95rem;
+  font-weight: 300;
 }
 
 /* Mobile */
@@ -141,11 +197,15 @@ body {
     padding: 80px 15px 40px;
   }
   
-  .letter-wrapper {
-    padding: 35px 25px;
+  .music-wrapper {
+    padding: 30px 20px;
   }
   
-  .letter-content h1 {
-    margin-bottom: 25px;
+  .music-section {
+    gap: 25px;
+  }
+  
+  .spotify-qr {
+    max-width: 300px;
   }
 }
