@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');
+@import url('https://fonts.cdnfonts.com/css/internet-friends');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Internet Friends', 'Poppins', sans-serif;
+  background: #e682aa;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.letter-wrapper {
+  width: 90%;
+  max-width: 800px;
+  background-image: url('images/letter-bg.png');
+  background-size: cover;
+  background-position: center;
+  padding: 60px 50px;
+  border-radius: 20px;
+  border: 4px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.letter-content {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #444;
+}
+
+.letter-content h1 {
+  font-family: 'Chelsea Market', cursive;
+  font-size: 2.8rem;
+  color: #e36393;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.letter-content p {
+  margin-bottom: 18px;
+}
+
+.ending {
+  text-align: right;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #d85a84;
+}
