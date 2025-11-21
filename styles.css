@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');
+@import url('https://fonts.cdnfonts.com/css/internet-friends');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Internet Friends', 'Poppins', sans-serif;
+  background: #e682aa;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Remove gradient overlay */
+body::before {
+  display: none;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  max-width: 600px;
+  position: relative;
+  z-index: 10;
+}
+
+.content {
+  animation: fadeInScale 1.2s ease-out;
+}
+
+@keyframes fadeInScale {
+  0% { opacity: 0; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.main-heading {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-family: 'Chelsea Market', cursive;
+  text-shadow: none;       /* NO GLOW */
+  animation: pulse 2s ease-in-out infinite;
+  letter-spacing: 2px;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+
+.subtitle {
+  font-size: clamp(1.1rem, 3vw, 1.4rem);
+  margin-bottom: 10px;
+  font-weight: 400;
+  text-shadow: none;
+}
+
+.tagline {
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  margin-bottom: 35px;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 18px 45px;
+  background: #fff;
+  color: #c05a82;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  border-radius: 50px;
+  border: 3px solid rgba(0,0,0,0.15);
+  box-shadow: none;           /* NO GLOW */
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  display: none; /* remove glow ripple */
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.btn-icon {
+  transition: 0.3s ease;
+}
+
+.btn:hover .btn-icon {
+  transform: translateX(5px);
+}
+
+/* Remove glow from floating hearts */
+.floating-hearts img {
+  position: absolute;
+  width: clamp(30px, 5vw, 50px);
+  height: auto;
+  animation: floatUp 8s linear infinite;
+  opacity: 0;
+  pointer-events: none;
+  filter: none;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+}
+
+/* Remove sparkle glow */
+.sparkles img {
+  position: absolute;
+  width: clamp(20px, 3vw, 35px);
+  height: auto;
+  animation: twinkle 3s ease-in-out infinite;
+  pointer-events: none;
+  filter: none;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; transform: scale(0.8) rotate(0); }
+  50% { opacity: 1; transform: scale(1.2) rotate(180deg); }
+}
+
+/* Remove glow from corner flowers */
+.corner-decoration {
+  position: absolute;
+  opacity: 0.7;
+  animation: rotate 10s linear infinite;
+  filter: none;
+}
+
+.corner-decoration img {
+  width: clamp(40px, 6vw, 70px);
+  height: auto;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0); }
+  100% { transform: rotate(360deg); }
+}
+
+.top-left { top: 20px; left: 20px; }
+.top-right { top: 20px; right: 20px; animation-delay: -2.5s; }
+.bottom-left { bottom: 20px; left: 20px; animation-delay: -5s; }
+.bottom-right { bottom: 20px; right: 20px; animation-delay: -7.5s; }
+
+@media (max-width: 600px) {
+  .container { padding: 15px; }
+  .btn { padding: 15px 35px; }
+  .corner-decoration img { width: 50px; }
+}
+
+@media (max-width: 400px) {
+  .tagline { margin-bottom: 25px; }
+  .btn { padding: 12px 30px; gap: 8px; }
+}
