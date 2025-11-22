@@ -31,7 +31,7 @@ body {
   height: auto;
   animation: floatUpSlow 12s linear infinite;
   opacity: 0;
-  filter: none; /* NO GLOW */
+  filter: none;
 }
 
 @keyframes floatUpSlow {
