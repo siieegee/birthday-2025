@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Memories</title>
+  <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+
+  <!-- Floating Images (matching home page) -->
+  <div class="floating-elements">
+    <img src="images/heart.png" class="float-img" style="left:8%; animation-delay:0s;">
+    <img src="images/star.png" class="float-img" style="left:22%; animation-delay:2s;">
+    <img src="images/flower.png" class="float-img" style="left:45%; animation-delay:4s;">
+    <img src="images/ribbon.png" class="float-img" style="left:68%; animation-delay:1.5s;">
+    <img src="images/heart.png" class="float-img" style="left:88%; animation-delay:3s;">
+
+    <img src="images/star.png" class="float-img" style="left:15%; animation-delay:0.5s;">
+    <img src="images/flower.png" class="float-img" style="left:35%; animation-delay:2.5s;">
+    <img src="images/ribbon.png" class="float-img" style="left:55%; animation-delay:4.5s;">
+    <img src="images/heart.png" class="float-img" style="left:75%; animation-delay:1s;">
+    <img src="images/star.png" class="float-img" style="left:90%; animation-delay:3.5s;">
+  </div>
+
+  <!-- Back button -->
+  <a href="home.html" class="back-btn">← Back Home</a>
+
+  <div class="container">
+    <header class="hero">
+      <h1 class="main-title">Our Favorite Memories</h1>
+      <p class="subtitle">Beautiful moments we've shared together</p>
+    </header>
+
+    <div class="gallery-wrapper">
+      <div class="polaroid-container">
+        
+        <!-- Left side - vertical strip of 3 small photos -->
+        <div class="polaroid-strip">
+          <div class="polaroid small" style="transform: rotate(-2deg);">
+            <div class="polaroid-photo">
+              <img src="images/memory1.jpg" alt="Memory 1">
+            </div>
+          </div>
+
+          <div class="polaroid small" style="transform: rotate(3deg);">
+            <div class="polaroid-photo">
+              <img src="images/memory2.jpg" alt="Memory 2">
+            </div>
+          </div>
+
+          <div class="polaroid small" style="transform: rotate(-4deg);">
+            <div class="polaroid-photo">
+              <img src="images/memory3.jpg" alt="Memory 3">
+            </div>
+          </div>
+        </div>
+
+        <!-- Center - scattered larger photos -->
+        <div class="polaroid-center">
+          <div class="polaroid medium" style="transform: rotate(8deg);">
+            <div class="polaroid-photo">
+              <img src="images/memory4.jpg" alt="Memory 4">
+            </div>
+          </div>
+
+          <div class="polaroid medium" style="transform: rotate(-5deg);">
+            <div class="polaroid-photo">
+              <img src="images/memory5.jpg" alt="Memory 5">
+            </div>
+          </div>
+
+          <div class="polaroid medium" style="transform: rotate(12deg);">
+            <div class="polaroid-photo">
+              <img src="images/memory6.jpg" alt="Memory 6">
+            </div>
+          </div>
+
+          <div class="polaroid medium" style="transform: rotate(-7deg);">
+            <div class="polaroid-photo">
+              <img src="images/memory7.jpg" alt="Memory 7">
+            </div>
+          </div>
+        </div>
+
+        <!-- Right side - large polaroid -->
+        <div class="polaroid-right">
+          <div class="polaroid large" style="transform: rotate(-8deg);">
+            <div class="polaroid-photo">
+              <img src="images/memory8.jpg" alt="Memory 8">
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Second row with 2 more photos -->
+      <div class="polaroid-container">
+        <div class="polaroid medium" style="transform: rotate(5deg);">
+          <div class="polaroid-photo">
+            <img src="images/memory9.jpg" alt="Memory 9">
+          </div>
+        </div>
+
+        <div class="polaroid medium" style="transform: rotate(-3deg);">
+          <div class="polaroid-photo">
+            <img src="images/memory10.jpg" alt="Memory 10">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>Made with endless love, just for you</p>
+      <p class="footer-date">December 11, 2025</p>
+    </footer>
+  </div>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox">
+    <span class="close-lightbox">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+    <div class="lightbox-caption" id="lightbox-caption"></div>
+  </div>
+
+  <script>
+    // Lightbox functionality
+    const polaroids = document.querySelectorAll('.polaroid');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const closeLightbox = document.querySelector('.close-lightbox');
+
+    polaroids.forEach(polaroid => {
+      polaroid.addEventListener('click', function() {
+        const img = this.querySelector('img');
+        
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+      });
+    });
+
+    closeLightbox.addEventListener('click', function() {
+      lightbox.style.display = 'none';
+    });
+
+    lightbox.addEventListener('click', function(e) {
+      if (e.target === lightbox) {
+        lightbox.style.display = 'none';
+      }
+    });
+  </script>
+
+</body>
+</html>
